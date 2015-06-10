@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <default>
+    <menu n="100">
+      <label>F-4F</label>
+      <enabled type="bool">true</enabled>
+      <item>
+        <label>Select Livery</label>
+        <binding>
+          <command>nasal</command>
+          <script>aircraft.livery.dialog.open()</script>
+        </binding>
+      </item>
+<!--
+      <item>
+        <label>Immatriculation</label>
+        <binding>
+          <command>nasal</command>
+          <script>xf11.immat_dialog.toggle()</script>
+        </binding>
+      </item>
+-->
+    </menu>
+  </default>
+
+</PropertyList>
+

@@ -5,7 +5,7 @@
 <!--
   <submodel>
     <name>jettison centerline fuel tank</name>
-    <model>Aircraft/F-4E/Models/Stores/Tank_600/tank.ac</model>
+    <model>Aircraft/F-4F/Models/Stores/Tank_600/tank.ac</model>
     <trigger>fdm/jsbsim/systems/armament/release</trigger>
     <trigger-once>true</trigger-once>
     <z-offset> -2.0</z-offset>
@@ -40,10 +40,11 @@
     <weight>50</weight>
     <aero-stabilised>false</aero-stabilised>
   </submodel>
+
 <!--
   <submodel>
     <name>jettison left fuel tank</name>
-    <model>Aircraft/F-4E/Models/Stores/Tank_370/tank.ac</model>
+    <model>Aircraft/F-4F/Models/Stores/Tank_370/tank.ac</model>
     <trigger>fdm/jsbsim/systems/armament/station1/released</trigger>
     <trigger-once>true</trigger-once>
     <speed>0</speed>
@@ -61,7 +62,7 @@
 
   <submodel>
     <name>jettison right fuel tank</name>
-    <model>Aircraft/F-4E/Models/Stores/Tank_370/tank.ac</model>
+    <model>Aircraft/F-4F/Models/Stores/Tank_370/tank.ac</model>
     <trigger>fdm/jsbsim/systems/armament/station5/released</trigger>
     <trigger-once>true</trigger-once>
     <speed>0</speed>
@@ -87,7 +88,7 @@
     <repeat>true</repeat>
     <delay>0.15</delay>
     <count>-1</count>
-    <x-offset> 31.0</x-offset>
+    <x-offset> 32.0</x-offset>
     <y-offset>  0.0</y-offset>
     <z-offset> -1.6</z-offset>
     <pitch-offset>-2.8</pitch-offset>
@@ -106,9 +107,9 @@
     <repeat>true</repeat>
     <delay>0</delay>
     <count>-1</count>
-    <x-offset> 31.0</x-offset>
+    <x-offset> 30.0</x-offset>
     <y-offset>  0.0</y-offset>
-    <z-offset> -1.6</z-offset>
+    <z-offset> -1.7</z-offset>
     <pitch-offset>-2.8</pitch-offset>
     <life>10.0</life>
     <wind>false</wind>
@@ -122,6 +123,7 @@
     <submodel-path>Aircraft/DavePack/Stores/guns/bullet-submodel.xml</submodel-path>
   </submodel>
 
+<!--
   <submodel> 
     <name>gunsmoke</name>
     <model>Aircraft/DavePack/Stores/guns/smoke.xml</model>
@@ -140,5 +142,6 @@
     <buoyancy>33</buoyancy>
     <life>1</life>
   </submodel>
+-->
 
 </PropertyList>

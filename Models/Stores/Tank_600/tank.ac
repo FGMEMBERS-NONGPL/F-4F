@@ -1,12 +1,12 @@
 AC3Db
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.8 0.8 0.8  emis 0 0 0  spec 0 0 0  shi 50  trans 0
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.8 0.8 0.8  emis 0 0 0  spec 0 0 0  shi 50  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0 0 0  shi 50  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0 0 0  shi 50  trans 0
 OBJECT world
 kids 1
 OBJECT poly
 name "all"
 loc 0.206305 -0.7706 -0.000969887
-texture "tank.rgb"
+texture "tank2.rgb"
 crease 45.000000
 numvert 118
 0.853069 0.00361019 0.44746

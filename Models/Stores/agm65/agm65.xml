@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+<!-- AGM-65 Maverick
+Weight 462–670 lb (209–304 kg)[2] 
+Length 8 feet 2 inches (2.49 m)[2] 
+Diameter 12 in (30.5 cm)[2] 
+
+Warhead 57 kg (125 lb) 
+WDU-20/B shaped-charge (A/B/C models), 136 kg (300 lb) 
+WDU-24/B penetrating blast-fragmentation (E/F/G/H/J/K models), 
+E models utilize FMU-135/B delayed impact fuze[2] -->
+
+  <path>agm65.ac</path>
+
+  <animation>
+    <object-name>trirack</object-name>
+  </animation>
+
+</PropertyList>

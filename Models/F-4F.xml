@@ -3,234 +3,215 @@
 <PropertyList>
 
  <path>F4F.ac</path>
+ 
+  <!-- MP sound call -->
+  <sound><path>Aircraft/F-4F/Sounds/mp-sound.xml</path></sound>
+  
+  
+  <!-- Skin switching code -->
+
+<nasal>
+    <load>
+      var livery_update = aircraft.livery_update.new("Aircraft/F-4F/Models/Liveries", 10);
+    </load>
+    <unload>
+      livery_update.stop();
+    </unload>
+  </nasal>
+ 
+ <!-- fuselage -->
+  <animation>
+        <type>material</type>
+        <object-name>fuselage</object-name>
+		
+        
+        <property-base>sim/model/livery</property-base>
+        <texture-prop>texture-fuselage</texture-prop>
+        <texture>01F4N.jpg</texture>
+    </animation>
+ 
+ <!-- fuselage nose -->
+  <animation>
+        <type>material</type>
+        <object-name>fuselage-fwd</object-name>
+		<object-name>fwd-canopy-frame</object-name>
+		
+        
+        <property-base>sim/model/livery</property-base>
+        <texture-prop>texture-nose</texture-prop>
+        <texture>fwd-fuselage.jpg</texture>
+    </animation>
+	
+	<!-- fuselage underside-->
+  <animation>
+        <type>material</type>
+        <object-name>fuselage-bottom</object-name>
+		<object-name>nose-well-cover</object-name>
+		<object-name>NoseGearStrutDoor</object-name>
+		<object-name>NoseGearDoor</object-name>
+        <property-base>sim/model/livery</property-base>
+        <texture-prop>texture-belly</texture-prop>
+        <texture>02F4N.jpg</texture>
+    </animation>
+ 
+ <!-- fuselage rear -->
+  <animation>
+        <type>material</type>
+        <object-name>fuselage-aft</object-name>
+        
+        <property-base>sim/model/livery</property-base>
+        <texture-prop>texture-fuselagerear</texture-prop>
+        <texture>04F4N.jpg</texture>
+    </animation>
+ 
+ 
+ <!-- left upper wing -->
+    <animation>
+        <type>material</type>
+		<object-name>LWingUpper</object-name>
+        <object-name>LSlatMiddle-top</object-name>
+        <object-name>LAileron</object-name>
+		<object-name>LFlap</object-name>
+		<object-name>LSlatOuter-top</object-name>
+		<object-name>LHTailTop</object-name>
+		<object-name>LSpoiler</object-name>
+		
+        <property-base>sim/model/livery</property-base>
+        <texture-prop>texture-luwings</texture-prop>
+        <texture>05F4N.jpg</texture>
+    </animation>
+	
+	<!-- left lower wing -->
+    <animation>
+        <type>material</type>
+		<object-name>LWing-bottom</object-name>
+        <object-name>LAileron-bottom</object-name>
+        <object-name>LFlap-bottom</object-name>
+		<object-name>LSpeedbrake</object-name>
+		<object-name>LSlatMiddle</object-name>
+		<object-name>LSlatOuter</object-name>
+		<object-name>left-well-cover</object-name>
+		<object-name>LMainGearDoorInner</object-name>
+		<object-name>LMainGearDoor</object-name>
+		<object-name>SlatFairing</object-name>
+		<object-name>LHTailBottom</object-name>
+		
+        <property-base>sim/model/livery</property-base>
+        <texture-prop>texture-llwings</texture-prop>
+        <texture>06F4N.jpg</texture>
+    </animation>
+	
+	<!-- right upper wing -->
+    <animation>
+        <type>material</type>
+		<object-name>RWing-top</object-name>
+        <object-name>RSlatMiddle-top</object-name>
+        <object-name>RSlatOuter-top</object-name>
+		<object-name>RFlap</object-name>
+		<object-name>RAileron</object-name>
+		<object-name>RHTailTop</object-name>
+		<object-name>RSpoiler</object-name>
+        <property-base>sim/model/livery</property-base>
+        <texture-prop>texture-ruwings</texture-prop>
+        <texture>07F4N.jpg</texture>
+    </animation>
+	
+	<!-- right lower wing -->
+    <animation>
+        <type>material</type>
+		<object-name>RWing-bottom</object-name>
+        <object-name>RFlap-bottom</object-name>
+        <object-name>RAileron-bottom</object-name>
+		<object-name>RSpeedbrake</object-name>
+		<object-name>RSlatOuter</object-name>
+		<object-name>RSlatMiddle</object-name>
+		<object-name>SlatFairing</object-name>
+		<object-name>right-well-cover</object-name>
+		<object-name>RMainGearDoorInner</object-name>
+		<object-name>RMainGearDoor</object-name>
+		<object-name>RHTailBottom</object-name>
+		<object-name>RSlatInner</object-name>
+        <property-base>sim/model/livery</property-base>
+        <texture-prop>texture-rlwings</texture-prop>
+        <texture>08F4N.jpg</texture>
+    </animation>
+	<!-- Tail -->
+	<animation>
+        <type>material</type>
+        <object-name>VTail</object-name>
+        <object-name>Rudder</object-name>
+		<object-name>Pitot</object-name>
+		
+		
+        <property-base>sim/model/livery</property-base>
+        <texture-prop>texture-tail</texture-prop>
+        <texture>09F4N.jpg</texture>
+    </animation>
+
+<!-- pylons -->
+	<animation>
+        <type>material</type>
+        <object-name>Station5</object-name>
+        <object-name>Station4</object-name>
+		<object-name>Rails-right</object-name>
+		<object-name>centerline-pylon</object-name>
+		<object-name>Station2</object-name>
+		<object-name>Rails-left</object-name>
+		<object-name>Station1</object-name>
+		
+        <property-base>sim/model/livery</property-base>
+        <texture-prop>texture-pylon</texture-prop>
+        <texture>pylons.jpg</texture>
+    </animation>
+
+<!-- gun -->
+	<animation>
+        <type>material</type>
+        <object-name>gun-housing</object-name>
+        	
+        <property-base>sim/model/livery</property-base>
+        <texture-prop>texture-gun</texture-prop>
+        <texture>gun.jpg</texture>
+    </animation>	
+	
+	<!-- pilots -->
+	<animation>
+        <type>material</type>
+        <object-name>Pilot-front</object-name>
+		<object-name>Pilot-back</object-name>
+        <object-name>Pilot</object-name>
+		<object-name>WSO</object-name>
+		
+		
+        <property-base>sim/model/livery</property-base>
+        <texture-prop>texture-pilot</texture-prop>
+        <texture>00F4N.jpg</texture>
+    </animation>	
+  
+  
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+    <object-name>mirrors</object-name>
+    
+  </animation>
+
 
 
 <!-- ******************** instruments *******************-->
 
  <model>
-  <path>Aircraft/F-4F/Models/Instruments/Radar/radar.xml</path>
+  <path>Aircraft/F-4F/Models/interior.xml</path>
   <offsets>
-   <x-m>-6.15</x-m>
+   <x-m>0.097</x-m>
    <y-m>0.0</y-m>
-   <z-m>1.235</z-m>
+   <z-m>1.29</z-m>
+   <pitch-deg>-12</pitch-deg>
   </offsets>
  </model>
 
- <model>
-  <path>Aircraft/DavePack/Instruments/AI/AI.xml</path>
-  <offsets>
-   <x-m>-6.138</x-m>
-   <y-m>0.</y-m>
-   <z-m>1.145</z-m>
-  </offsets>
- </model>
-
- <model>
-  <path>Aircraft/DavePack/Instruments/RDMI/RDMI.xml</path>
-  <offsets>
-   <x-m>-6.139</x-m>
-   <y-m>0.0</y-m>
-   <z-m>1.053</z-m>
-  </offsets>
- </model>
-
- <model>
-  <path>Aircraft/DavePack/Instruments/RDMI/nav-select.xml</path>
-  <offsets>
-   <x-m>-6.14</x-m>
-   <y-m>-0.07</y-m>
-   <z-m> 1.045</z-m>
-  </offsets>
- </model>
-
- <model>
-  <path>Aircraft/F-4F/Models/Instruments/n2/n2-1.xml</path>
-  <offsets>
-   <x-m>-6.14</x-m>
-   <y-m>0.14</y-m>
-   <z-m>1.14</z-m>
-  </offsets>
- </model>
-
- <model>
-  <path>Aircraft/F-4F/Models/Instruments/n2/n2-2.xml</path>
-  <offsets>
-   <x-m>-6.14</x-m>
-   <y-m>0.18</y-m>
-   <z-m>1.14</z-m>
-  </offsets>
- </model>
-
- <model>
-  <path>Aircraft/F-4F/Models/Instruments/EGT/EGT-1.xml</path>
-  <offsets>
-   <x-m>-6.14</x-m>
-   <y-m>0.14</y-m>
-   <z-m>1.10</z-m>
-  </offsets>
- </model>
-
- <model>
-  <path>Aircraft/F-4F/Models/Instruments/EGT/EGT-2.xml</path>
-  <offsets>
-   <x-m>-6.14</x-m>
-   <y-m>0.18</y-m>
-   <z-m>1.10</z-m>
-  </offsets>
- </model>
-
- <model>
-  <path>Aircraft/DavePack/Instruments/Nozzle/nozzle-1.xml</path>
-  <offsets>
-   <x-m>-6.13</x-m>
-   <y-m>0.14</y-m>
-   <z-m>1.06</z-m>
-  </offsets>
- </model>
-
- <model>
-  <path>Aircraft/DavePack/Instruments/Nozzle/nozzle-2.xml</path>
-  <offsets>
-   <x-m>-6.13</x-m>
-   <y-m>0.18</y-m>
-   <z-m>1.06</z-m>
-  </offsets>
- </model>
-
- <model>
-  <path>Aircraft/F-4F/Models/Instruments/AS/airspeed.xml</path>
-  <offsets>
-   <x-m>-6.138</x-m>
-   <y-m>-0.08</y-m>
-   <z-m>1.145</z-m>
-  </offsets>
- </model>
-
- <model>
-  <path>Aircraft/DavePack/Instruments/Alt/version2/altimeter.xml</path>
-  <offsets>
-   <x-m>-6.138</x-m>
-   <y-m>0.08</y-m>
-   <z-m>1.145</z-m>
-  </offsets>
- </model>
-
- <model>
-  <path>Aircraft/DavePack/Instruments/IVSI/IVSI.xml</path>
-  <offsets>
-   <x-m>-6.138</x-m>
-   <y-m>0.075</y-m>
-   <z-m>1.075</z-m>
-  </offsets>
- </model>
-
- <model>
-  <path>Aircraft/F-4F/Models/Instruments/Flaps/flaps.xml</path>
-  <offsets>
-   <x-m>-6.145</x-m>
-   <y-m>-0.185</y-m>
-   <z-m>1.09</z-m>
-  </offsets>
- </model>
-
- <model>
-  <path>Aircraft/F-4F/Models/Instruments/Gear/gear.xml</path>
-  <offsets>
-   <x-m>-6.147</x-m>
-   <y-m>-0.24</y-m>
-   <z-m>1.09</z-m>
-  </offsets>
- </model>
-
- <model>
-  <path>Aircraft/DavePack/Instruments/PanelLights/lights.xml</path>
-  <offsets>
-   <x-m>-6.138</x-m>
-   <y-m>-0.17</y-m>
-   <z-m>1.19</z-m>
-  </offsets>
- </model>
-
- <model>
-  <path>Aircraft/F-4F/Models/Instruments/Fuel/fuel.xml</path>
-  <offsets>
-   <x-m>-6.138</x-m>
-   <y-m>0.11</y-m>
-   <z-m>1.23</z-m>
-  </offsets>
- </model>
-
- <model>
-  <path>Aircraft/F-4F/Models/Instruments/Gunsight/gunsight.xml</path>
-  <offsets>
-   <x-m>-6.2</x-m>
-   <y-m>0</y-m>
-   <z-m>1.23</z-m>
-  </offsets>
- </model>
-
- <model>
-  <path>Aircraft/DavePack/Instruments/ILS/ILS.xml</path>
-  <offsets>
-   <x-m>-6.15</x-m>
-   <y-m>-0.0725</y-m>
-   <z-m>1.085</z-m>
-  </offsets>
- </model>
-
- <model>
-  <path>Aircraft/DavePack/Instruments/GMeter/gmeter.xml</path>
-  <offsets>
-   <x-m>-6.14</x-m>
-   <y-m>-0.13</y-m>
-   <z-m>1.085</z-m>
-  </offsets>
- </model>
-
- <model>
-  <path>Aircraft/DavePack/Instruments/MagCompass/comp.xml</path>
-  <offsets>
-   <x-m>-6.14</x-m>
-   <y-m>0.09</y-m>
-   <z-m>1.39</z-m>
-  </offsets>
- </model>
-
- <model>
-  <path>Aircraft/F-4F/Models/Instruments/AOA/aoa.xml</path>
-  <offsets>
-   <x-m>-6.143</x-m>
-   <y-m>-0.095</y-m>
-   <z-m>1.24</z-m>
-  </offsets>
- </model>
-
- <model>
-  <path>Aircraft/F-4F/Models/Instruments/AOA/indexer.xml</path>
-  <offsets>
-   <x-m>-6.18</x-m>
-   <y-m>-0.1</y-m>
-   <z-m>1.31</z-m>
-  </offsets>
- </model>
-
- <model>
-  <path>Aircraft/F-4F/Models/Instruments/Fuel/refuel-switch.xml</path>
-  <offsets>
-   <x-m>-6.13</x-m>
-   <y-m>0.22</y-m>
-   <z-m>1.08</z-m>
-  </offsets>
- </model>
-
- <model>
-  <path>Aircraft/DavePack/Instruments/Fuel/fuel-dump-switch.xml</path>
-  <offsets>
-   <x-m>-6.13</x-m>
-   <y-m>0.25</y-m>
-   <z-m>1.08</z-m>
-  </offsets>
- </model>
+ 
 
 <!-- ********************** stores **********************-->
 
@@ -246,64 +227,18 @@
  </model>
 
 
- <!-- Centerline 600 gal. tank 
  <model>
-  <path>Aircraft/F-4F/Models/Stores/Tank_600/tank_600.xml</path>
+  <path>Aircraft/F-4F/Models/Stores/loads.xml</path>
   <offsets>
-   <x-m> 0</x-m>
-   <y-m> 0</y-m>
-   <z-m>-0</z-m>
-  </offsets>
- </model>
- -->
-
- <!-- AIM-9, left side - left -->
- <model>
-  <path>Aircraft/F-4F/Models/Stores/AIM-9/sidewinder.xml</path>
-  <offsets>
-   <x-m>-1.67</x-m>
-   <y-m>-2.38</y-m>
-   <z-m>-0.44</z-m>
-   <pitch-deg>-2</pitch-deg>
-  </offsets>
- </model>
-
- <!-- AIM-9, left side - right -->
- <model>
-  <path>Aircraft/F-4F/Models/Stores/AIM-9/sidewinder.xml</path>
-  <offsets>
-   <x-m>-1.67</x-m>
-   <y-m>-1.92</y-m>
-   <z-m>-0.44</z-m>
-   <pitch-deg>-2</pitch-deg>
-  </offsets>
- </model>
-
- <!-- AIM-9, right side - right -->
- <model>
-  <path>Aircraft/F-4F/Models/Stores/AIM-9/sidewinder.xml</path>
-  <offsets>
-   <x-m>-1.67</x-m>
-   <y-m> 2.38</y-m>
-   <z-m>-0.44</z-m>
-   <pitch-deg>-2</pitch-deg>
-  </offsets>
- </model>
-
- <!-- AIM-9, right side - left -->
- <model>
-  <path>Aircraft/F-4F/Models/Stores/AIM-9/sidewinder.xml</path>
-  <offsets>
-   <x-m>-1.67</x-m>
-   <y-m> 1.92</y-m>
-   <z-m>-0.44</z-m>
-   <pitch-deg>-2</pitch-deg>
+   <x-m></x-m>
+   <y-m></y-m>
+   <z-m></z-m>
   </offsets>
  </model>
 
 
 <!-- ********************** effects **********************-->
-
+<!--
  <model>
   <path>Aircraft/DavePack/Effects/Afterburner/plume-1-mp.xml</path>
    <offsets>
@@ -323,9 +258,9 @@
      <pitch-deg>2</pitch-deg>
    </offsets>
  </model>
-
- <model>
-  <path>Aircraft/DavePack/Effects/Vortex/condensation-left.xml</path>
+-->
+<model>
+  <path>Aircraft/F-4F/Models/Effects/tiptrail/tiptrail.xml</path>
    <offsets>
      <x-m>3.9</x-m>
      <y-m>-6.3</y-m>
@@ -335,7 +270,7 @@
  </model>
 
  <model>
-  <path>Aircraft/DavePack/Effects/Vortex/condensation-right.xml</path>
+  <path>Aircraft/F-4F/Models/Effects/tiptrail/tiptrail.xml</path>
    <offsets>
      <x-m>3.9</x-m>
      <y-m>6.3</y-m>
@@ -344,19 +279,38 @@
    </offsets>
  </model>
 
- <!-- beacon flash -->
+<!-- beacon flash -->
  <model>
-   <path>Aircraft/DavePack/Effects/Red-beacon/flash.xml</path>
+  <path>Aircraft/F-4F/Models/lights/beacon.xml</path>
    <offsets>
      <x-m>5.33</x-m>
      <y-m>0</y-m>
      <z-m>2.45</z-m>
    </offsets>
  </model>
-
-  <!-- Contrail-left -->
+ 
+ 
   <model>
-    <path>Aircraft/DavePack/Effects/Contrail/contrail-left.xml</path>
+    <path>Aircraft/F-4F/Models/lights/RedLight.xml</path>
+    <offsets>
+      <x-m>  4.2 </x-m>
+      <y-m> -6.3 </y-m>
+      <z-m> 0.3 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/F-4F/Models/lights/GreenLight.xml</path>
+    <offsets>
+      <x-m>  4.2 </x-m>
+      <y-m> 6.3 </y-m>
+      <z-m> 0.3 </z-m>
+    </offsets>
+  </model>
+
+ <!-- Contrail-left -->
+  <model>
+    <path>Aircraft/F-4F/Models/Effects/trail/trailL.xml</path>
     <offsets>
       <x-m>  12.0 </x-m>
       <y-m>  -0.7 </y-m>
@@ -366,11 +320,31 @@
 
   <!-- Contrail-right -->
   <model>
-    <path>Aircraft/DavePack/Effects/Contrail/contrail-right.xml</path>
+    <path>Aircraft/F-4F/Models/Effects/trail/trailR.xml</path>
     <offsets>
       <x-m>  12.0 </x-m>
       <y-m>   0.7 </y-m>
       <z-m>   0.0 </z-m>
+    </offsets>
+  </model>
+  
+   <!-- Gauche -->
+  <model>
+    <path>Aircraft/FGR2/Models/Effects/smoke/smokeL.xml</path>
+    <offsets>
+      <x-m>  4.2</x-m>
+      <y-m>  -0.71</y-m>
+      <z-m> 0.16</z-m>
+    </offsets>
+  </model>
+
+  <!-- Droite -->
+  <model>
+    <path>Aircraft/FGR2/Models/Effects/smoke/smokeR.xml</path>
+    <offsets>
+     <x-m>  4.2</x-m>
+      <y-m>  0.71</y-m>
+      <z-m> 0.16</z-m>
     </offsets>
   </model>
 
@@ -478,8 +452,8 @@
   <object-name>LNoseTire</object-name>
   <object-name>RNoseTire</object-name>
   <object-name>NoseGearAxle</object-name>
-  <property>fdm/jsbsim/systems/NWS/steer-cmd</property>
-  <factor>60</factor>
+  <property>sim/multiplay/generic/float[1]</property>
+  <factor>1</factor>
   <center>
    <x-m>-6.645</x-m>
    <y-m>0</y-m>
@@ -707,7 +681,6 @@
   <type>rotate</type>
   <object-name>LHTailTop</object-name>
   <object-name>LHTailBottom</object-name>
-  <object-name>LHTail-slat</object-name>
   <property>surface-positions/elevator-pos-norm</property>
   <factor>15</factor>
   <offset-deg>0</offset-deg>   
@@ -727,7 +700,6 @@
   <type>rotate</type>
   <object-name>RHTailTop</object-name>
   <object-name>RHTailBottom</object-name>
-  <object-name>RHTail-slat</object-name>
   <property>surface-positions/elevator-pos-norm</property>
   <factor>-15</factor>
   <offset-deg>0</offset-deg>   
@@ -1032,7 +1004,7 @@
   <object-name>Pilot</object-name>
   <object-name>Pilot-front</object-name>
   <object-name>Pilot-back</object-name>
-  <object-name>FrontSeat</object-name>
+ 
   <condition>
    <not>
    <equals>
@@ -1104,6 +1076,53 @@
     <blue>1</blue>
   </emission>
  </animation>
+ 
+ <!-- Landing lights -->
+   <model>
+<path>Aircraft/F-4F/Models/lights/landinglight.xml</path>
+<name>NoseGearLandinglight</name>     
+<condition>
+ <equals>
+<property>gear/gear[0]/position-norm</property>
+<value type="bool">true</value>
+ </equals>
+  </condition>
+
+<offsets>
+      <x-m>-7 </x-m>
+      <y-m>0</y-m>
+      <z-m>-0.6</z-m>
+      <pitch-deg>-6.15</pitch-deg>
+      <heading-deg>0</heading-deg>    
+</offsets>
+</model>
+
+<model>
+    <name>Taxi-Light-Left</name>
+    <path>Aircraft/F-4F/Models/lights/light-cone.xml</path>
+    <offsets>
+       <x-m>-7.5</x-m>
+      <y-m>0</y-m>
+      <z-m>-0.75</z-m>
+      <pitch-deg>-6.33</pitch-deg>
+      <heading-deg>0</heading-deg>
+    </offsets>
+  </model>
+  
+  
+ 
+  <animation>
+    <type>select</type>
+    <object-name>Taxi-Light-Left</object-name>
+	
+	<object-name>LandingLights</object-name>
+     <condition>
+      <equals>
+        <property>gear/gear[0]/position-norm</property>
+        <value> 1 </value>
+      </equals>
+    </condition>
+  </animation> 
 
  <!-- Forward Canopy -->
  <animation>
@@ -1123,6 +1142,195 @@
    <y>1</y>
    <z>0</z>
   </axis>
+ </animation>
+ 
+ <!-- Les flammes -->
+  <!-- Gauche -->
+  <model>
+    <path>Aircraft/F-4F/Models/Effects/flammes/flammesG.xml</path>
+    <offsets>
+      <x-m>  4.2</x-m>
+      <y-m>  -0.71</y-m>
+      <z-m> 0.16</z-m>
+      <pitch-deg>7</pitch-deg>
+    </offsets>
+  </model>
+
+ <!-- Droite -->
+  <model>
+    <path>Aircraft/F-4F/Models/Effects/flammes/flammesD.xml</path>
+    <offsets>
+      <x-m>  4.2</x-m>
+      <y-m>  0.71</y-m>
+      <z-m> 0.16</z-m>
+      <pitch-deg>7</pitch-deg>
+    </offsets>
+  </model>
+ 
+ <!-- Nozzles -->
+  
+  <model>
+   <path>Aircraft/F-4F/Models/Effects/nozzles/Nozzles.xml</path>
+   <offsets>
+     <x-m>-9.6</x-m>
+     <y-m>0.19</y-m>
+     <z-m>2</z-m>
+     <pitch-deg>7</pitch-deg>
+   </offsets>
+ </model>
+ 
+ <model>
+   <path>Aircraft/F-4F/Models/Effects/nozzles/Nozzles.xml</path>
+   <offsets>
+     <x-m>-9.6</x-m>
+     <y-m>1.7</y-m>
+     <z-m>2</z-m>
+     <pitch-deg>7</pitch-deg>
+   </offsets>
+ </model>
+
+ <model>
+		<path>Aircraft/F-4F/Models/Effects/Vapour/Vapour.xml</path>
+		<offsets>
+			<x-m>-2.0</x-m>
+			<y-m>-1.5</y-m>
+			<z-m>0.9</z-m>
+			<roll-deg>0</roll-deg>
+			<pitch-deg>0</pitch-deg>
+			<heading-deg>-25</heading-deg>
+		</offsets>
+	</model>
+	
+	<model>
+		<path>Aircraft/F-4F/Models/Effects/Vapour/Vapour.xml</path>
+		<offsets>
+			<x-m>-2.0</x-m>
+			<y-m>1.5</y-m>
+			<z-m>0.9</z-m>
+			<roll-deg>0</roll-deg>
+			<pitch-deg>0</pitch-deg>
+			<heading-deg>25</heading-deg>
+		</offsets>
+	</model>
+ 
+ <model>
+		<path>Aircraft/F-4F/Models/Effects/Vapour/Vapour2.xml</path>
+		<offsets>
+			<x-m>1.0</x-m>
+			<y-m>-4</y-m>
+			<z-m>0.9</z-m>
+			<roll-deg>0</roll-deg>
+			<pitch-deg>0</pitch-deg>
+			<heading-deg>45</heading-deg>
+		</offsets>
+	</model>
+	
+	<model>
+		<path>Aircraft/F-4F/Models/Effects/Vapour/Vapour2.xml</path>
+		<offsets>
+			<x-m>1.0</x-m>
+			<y-m>4</y-m>
+			<z-m>0.9</z-m>
+			<roll-deg>0</roll-deg>
+			<pitch-deg>0</pitch-deg>
+			<heading-deg>-45</heading-deg>
+		</offsets>
+	</model>
+ 
+ 
+ <model>
+		<path>Aircraft/F-4F/Models/Effects/boom/fx.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model> 
+	
+	<model>
+		<name>fire</name>
+		<path>Aircraft/F-4F/Models/Effects/Engine/Fire.xml</path>
+		<condition>
+			<equals>
+				<property>sim/crashed</property>
+				<value type="bool">true</value>
+			</equals>
+		</condition>
+		<offsets>
+			<x-m>1.05</x-m>
+			<y-m>0.00</y-m>
+			<z-m>1.75</z-m>
+			<heading-deg>0</heading-deg>
+			<roll-deg>0</roll-deg>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
+	
+	 <!-- aircraft wash modeled in the lines below -->
+ 
+ <model>
+	 <name>aircraft_wash_l</name>
+	 <path>Aircraft/F-4F/Models/Effects/aircraft_wash.xml</path>
+	 <condition>
+		 <equals>
+			 <property>controls/state/low_level</property>
+			 <value>1</value>
+		 </equals>
+	 </condition>
+	 <offsets>
+		 <x-m>25.000</x-m>
+		 <y-m>4.50</y-m>
+		 <z-m>0.0</z-m>
+		 <pitch-deg>0</pitch-deg>
+	 </offsets>
+ </model>
+ 
+ <model>
+	 <name>aircraft_wash_r</name>
+	 <path>Aircraft/F-4F/Models/Effects/aircraft_wash.xml</path>
+	 <condition>
+		 <equals>
+			 <property>controls/state/low_level</property>
+			 <value>1</value>
+		 </equals>
+	 </condition>
+	 <offsets>
+		 <x-m>25.000</x-m>
+		 <y-m>-4.50</y-m>
+		 <z-m>0.0</z-m>
+		 <pitch-deg>0</pitch-deg>
+	 </offsets>
+ </model>
+  
+  <animation>
+	 <type>translate</type>
+	 <object-name>aircraft_wash_l</object-name>
+	 <object-name>aircraft_wash_r</object-name>
+	 <property>position/altitude-agl-ft</property>
+	 <condition>
+		 <equals>
+			 <property>controls/state/low_level</property>
+			 <value>1</value>
+		 </equals>
+	 </condition>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>300.0</ind>
+			 <dep>-90</dep>
+		 </entry>
+	 </interpolation>
+	 
+	 <axis>
+		 <x>-1</x>
+		 <y>0</y>
+		 <z>1.0</z>
+	 </axis>
+	 
  </animation>
 
 </PropertyList>

@@ -24,7 +24,7 @@
       </table>
    </scheduled_gain>
 
-   <scheduled_gain name="Yaw Damper Beta">
+   <scheduled_gain name="Yaw Damper Beta"><!--turned off here -->
       <input>aero/beta-rad</input>
       <table>
         <independentVar lookup="row">velocities/ve-kts</independentVar>

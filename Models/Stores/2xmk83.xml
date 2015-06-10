@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+<model>
+ 
+  <path>Aircraft/F-4F/Models/Stores/doublerack.xml</path>
+  <offsets>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+   <pitch-deg>0</pitch-deg>
+  </offsets>
+ </model>
+
+
+   
+
+  <!-- left  mk83 -->
+ <model>
+ <name>L-mk83</name>
+  <path>Aircraft/F-4F/Models/Stores/mk83/mk83.xml</path>
+  <offsets>
+   <x-m>-0.15</x-m>
+   <y-m>-0.4</y-m>
+   <z-m>-0.2</z-m>
+   <pitch-deg>0</pitch-deg>
+  </offsets>
+ </model>
+ 
+ <!-- right  mk83 -->
+ <model>
+ <name>R-mk83</name>
+  <path>Aircraft/F-4F/Models/Stores/mk83/mk83.xml</path>
+  <offsets>
+   <x-m>-0.15</x-m>
+   <y-m>0.4</y-m>
+   <z-m>-0.2</z-m>
+   <pitch-deg>0</pitch-deg>
+  </offsets>
+ </model>
+
+</PropertyList>

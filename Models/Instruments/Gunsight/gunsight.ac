@@ -1,9 +1,9 @@
 AC3Db
 MATERIAL "ac3dmat0" rgb 0 0 0  amb 0 0 0  emis 0 0 0  spec 0 0 0  shi 0  trans 0.404
 MATERIAL "ac3dmat0" rgb 0 0 0  amb 0 0 0  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.8 0.8 0.8  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat14" rgb 0.8 0.8 0.8  amb 0.6 0.6 0.6  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat14" rgb 0.8 0.8 0.8  amb 0.6 0.6 0.6  emis 0 0 0  spec 0 0 0  shi 76  trans 0.894
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat14" rgb 0.8 0.8 0.8  amb 0.8 0.8 0.8  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat14" rgb 0.8 0.8 0.8  amb 0.8 0.8 0.8  emis 0 0 0  spec 0 0 0  shi 76  trans 0.894
 MATERIAL "ac3dmatpipper" rgb 1 1 1  amb 1 1 1  emis 1 1 1  spec 0 0 0  shi 0  trans 0
 OBJECT world
 kids 7
@@ -66,7 +66,7 @@ refs 4
 kids 0
 OBJECT poly
 name "pipper"
-loc 0.00410484 0.0211859 -0.000753796
+loc 0.00410484 0.0244673 -0.000753796
 texture "piper.png"
 crease 45.000000
 numvert 4
